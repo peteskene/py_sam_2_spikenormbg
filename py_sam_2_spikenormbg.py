@@ -1,14 +1,15 @@
-def py_sam_2_spikenormbg(user='pskene', folder=None, spike_suffix='dm6', input_type = 'sam', ends=False, lengths_analysis=True, lengths_image=True, size_select_1=True, size_select_2=True, bedgraph=True, chrom_sizes='hg19',
+def py_sam_2_spikenormbg(folder=None, spike_suffix='dm6', input_type = 'sam', ends=False, lengths_analysis=True, lengths_image=True, size_select_1=True, size_select_2=True, bedgraph=True, chrom_sizes='hg19',
                          big_wig=True, size_min_1 = 20, size_max_1=120, size_min_2=150, size_max_2=710, multiplying_factor=10000):
     
     """
+    Script written by Pete Skene (peteskene@gmail.com). Free for academic use only.
+    
     Script will take a folder of sam or bam files and generate bedgraphs. The sam/bam files need to be of properly matched pairs.
     Will always make bedgraphs using the entire inserts, can also make bedgraphs using just insert ends (see ends option)
     
     Expected file naming convention for data_files and spike_files, e.g. PS_HsDm_CTCF_1m.sam and PS_HsDm_CTCF_1m.sam.FLY
     ___________
     Parameters:
-    -user: Hutch login as a string, this is to set temp directory
     -folder: path to folder containing sam or bam files. e.g. '/home/pskene/test_data/test_samfiles', 
             if 'None' then looks in current working directory
     -input_type: string describing either 'bam' or 'sam'. Default = 'sam'
