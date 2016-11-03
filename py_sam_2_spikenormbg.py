@@ -42,7 +42,7 @@ def py_sam_2_spikenormbg(folder=None, spike_suffix='dm6', input_type = 'sam', en
     from datetime import datetime
     startTime = datetime.now()
     
-    pybedtools.set_tempdir('/loc/scratch/' + user)
+    #pybedtools.set_tempdir('/loc/scratch/' + user)
     
     #change directory as instructed
     if folder != None:
